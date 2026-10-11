@@ -1,5 +1,6 @@
-# SMART PARKING LOT MANAGEMENT SYSTEM (v2.0)
-**A Robust, Pure Object-Oriented Console Application in Java 17+ (INR Edition)**
+# Smart Parking Lot Management System
+
+A Java 17+ console application for managing vehicle parking, slot allocation, vehicle tracking, checkout, and parking fee calculation in Indian Rupees (INR).
 
 ---
 
