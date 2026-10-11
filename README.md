@@ -5,7 +5,7 @@ A Java 17+ console application for managing vehicle parking, slot allocation, ve
 ---
 
 ## 1. Abstract
-The **Smart Parking Lot Management System** is a pure console-based Java application designed to streamline vehicle parking, slot allocation, active vehicle tracking, and automated checkout billing. Built following senior-level software engineering practices, it cleanly demonstrates the **Four Pillars of Object-Oriented Programming (OOP)**—*Encapsulation, Inheritance, Polymorphism, and Abstraction*—while managing in-memory collections (`ArrayList`, `HashMap`, `HashSet`) with guaranteed state consistency. The system features custom exception handling, round-up ceiling billing in Indian Rupees (₹ / INR), and resilient user input validation with graceful crash recovery and exit confirmation.
+The **Smart Parking Lot Management System** is a pure console-based Java application designed to streamline vehicle parking, slot allocation, active vehicle tracking, and automated checkout billing. Designed to demonstrate object-oriented programming and Java application development, it cleanly demonstrates the **Four Pillars of Object-Oriented Programming (OOP)**—*Encapsulation, Inheritance, Polymorphism, and Abstraction*—while managing in-memory collections (`ArrayList`, `HashMap`, `HashSet`) with consistency checks across the parking lot's collections. The system features custom exception handling, round-up ceiling billing in Indian Rupees (₹ / INR), and resilient user input validation with graceful crash recovery and exit confirmation.
 
 ---
 
@@ -13,7 +13,7 @@ The **Smart Parking Lot Management System** is a pure console-based Java applica
 - **Automated Slot Allocation**: Dynamically allocate compatible parking slots for two-wheelers (`Bike`) and four-wheelers (`Car`).
 - **Slot Reuse**: Instantly release and reuse vacated parking slots when a parked vehicle checks out.
 - **OOP Demonstration**: Serve as a reference educational project highlighting real-world OOP paradigms without external frameworks.
-- **Synchronized Data Structures**: Keep an `ArrayList` of physical slots, a `HashMap` of active vehicles, and a `HashSet` of active registration plates in 100% sync.
+- **Synchronized Data Structures**: Keep an `ArrayList` of physical slots, a `HashMap` of active vehicles, and a `HashSet` of active registration plates in consistent state across the collections.
 - **Custom Business Exceptions**: Enforce business rules (preventing overcapacity, duplicate entries, invalid vehicle types, and missing records) via custom exceptions.
 - **Transparent Billing Engine**: Implement a ceiling/round-up-to-next-hour billing calculator in INR (₹) with configurable hourly tariffs, minimum charges, and negative-duration guardrails.
 - **Zero-Dependency Portability**: Run seamlessly on any system with Java 17+ using standard JDK tools (`javac`, `java`).
@@ -138,7 +138,7 @@ The system concurrently uses three standard Java collections to achieve optimal 
 4. **Collection Consistency Guarantee**:
    - In `parkVehicle()`: The slot is marked occupied, the vehicle is added to `activeVehicleMap`, and the plate is added to `activeRegistrationNumbers`.
    - In `removeVehicle()`: The slot is vacated, the vehicle is removed from `activeVehicleMap`, and the plate is removed from `activeRegistrationNumbers`.
-   - Verified via `parkingLot.isCollectionConsistencyValid()`, guaranteeing that `slots.occupiedCount == activeVehicleMap.size() == activeRegistrationNumbers.size()` at all times.
+   - The method parkingLot.isCollectionConsistencyValid() checks that `slots.occupiedCount == activeVehicleMap.size() == activeRegistrationNumbers.size()` at all times.
 
 ---
 
