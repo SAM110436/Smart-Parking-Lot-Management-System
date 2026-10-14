@@ -426,3 +426,19 @@ All 22 unit and integration tests execute natively without external dependencies
 - **Multi-Level / Multi-Floor Expansion**: Support multi-tier parking lots (e.g., Basement 1, Floor 1-4) with VIP and EV charging bays.
 - **Barcode / QR Code Generation**: Output ASCII QR codes or alphanumeric ticket tokens for automated gate integration.
 - **RESTful API Wrapper**: Expose parking operations as Spring Boot REST endpoints or lightweight HTTP microservices.
+
+
+
+---
+
+## 📸 Screenshots
+
+### 1. Main Menu
+![Smart Parking Lot Main Menu](main_mainu.png)
+
+### 2. Parking Slots Layout
+![Parking Slots Layout](parking_status.png)
+
+### 3. Parking Lot Statistics
+![Parking Lot Statistics](parking_statistics.png)
+
